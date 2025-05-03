@@ -88,6 +88,16 @@ Summary:
 
 ---
 
+## 🚀TODO
+
+- [ ] Support fetching pull/merge requests from both **Bitbucket** and **GitHub**, including **private repositories** using authentication.
+- [ ] Enable filtering of merged MRs **based on time period** (e.g., last 3 or 7 days) instead of a fixed count. This aligns better with agile development workflows.
+- [ ] Replace local text file output with **Slack messages** or **email notifications** to improve visibility and team collaboration.
+- [ ] Schedule the script to run via **cron job** (e.g., weekly or at specific times) to eliminate the need for manual execution.
+- [ ] Process only MRs that are **merged into specific branches** such as `master`, `main`, or `develop`.
+
+---
+
 ## 📜 License
 
 MIT License – Use freely at your own risk.
