@@ -1,0 +1,51 @@
+PR #49: Refactor by Ezike
+URL: https://github.com/Ezike/Baking-App-Kotlin/pull/49
+Summary:
+Updated the Project.xml file to remove unnecessary package imports and modified the arrangement rules.
+================================================================================
+
+PR #42: Bug fix/navigation dispatcher issue by Ezike
+URL: https://github.com/Ezike/Baking-App-Kotlin/pull/42
+Summary:
+Updated Android build workflow to run debug unit tests and changed the Android Gradle plugin version to 4.2.0-alpha04. Also, made changes to the NavigationModule by removing the ActivityScoped annotation and updating the Dagger Hilt version to 2.28-alpha.
+================================================================================
+
+PR #40: refactor by Ezike
+URL: https://github.com/Ezike/Baking-App-Kotlin/pull/40
+Summary:
+Updated `FakeNavigationDispatcher` to use `StateFlow` instead of `MutableStateFlow` for `event` property to provide read-only access to the event.
+================================================================================
+
+PR #45: - move intent processing code in viewModel to StateMachine class by Ezike
+URL: https://github.com/Ezike/Baking-App-Kotlin/pull/45
+Summary:
+Updated Kotlin and Android Gradle versions in build configuration files and refactored imports in RecipeViewModel.
+================================================================================
+
+PR #41: Feature/GitHub actions by Ezike
+URL: https://github.com/Ezike/Baking-App-Kotlin/pull/41
+Summary:
+Added a GitHub Actions workflow file for Android build. It includes steps to set up JDK 1.8, run Spotless Apply and Check, run tests, and build the project. The workflow triggers on pull requests to the master branch and on push events. The gradlew file mode was changed from 100644 to 100755.
+================================================================================
+
+PR #39: refactor by Ezike
+URL: https://github.com/Ezike/Baking-App-Kotlin/pull/39
+Summary:
+1. Updated label attribute in nav_main.xml to empty string.
+2. Refactored FakeNavigationDispatcher to use private mutableEvent and exposed event through getter.
+3. Modified methods in FakeNavigationDispatcher to update mutableEvent instead of event value.
+================================================================================
+
+PR #38: complete RecipeViewModelTest.kt by Ezike
+URL: https://github.com/Ezike/Baking-App-Kotlin/pull/38
+Summary:
+1. In MainActivity.kt, added a check in onBackPressed() to call super.onBackPressed() only if onSupportNavigateUp() returns false.
+2. In FakeNavigationDispatcher.kt, created a FakeNavigationDispatcher object implementing NavigationDispatcher with methods to handle opening recipe and step details, and added a MutableStateFlow for events.
+================================================================================
+
+PR #37: Feature/presentation tests by Ezike
+URL: https://github.com/Ezike/Baking-App-Kotlin/pull/37
+Summary:
+Removed unused code related to `RecipeModel` and `invoke` method in `RecipeFragment`. Made `RecipeFragment` implement `MVIView<RecipeViewIntent, RecipeViewState>` directly instead of `RecipeClickListener`.
+================================================================================
+

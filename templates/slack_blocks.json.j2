@@ -1,0 +1,14 @@
+[
+  {"type": "header", "text": {"type": "plain_text", "text": "PR Digest"}},
+  {"type": "divider"},
+  {% for pr in prs %}
+  {"type": "section", "text": {"type": "mrkdwn", "text": "*<{{ pr.url }}|{{ pr.title }}>* by {{ pr.user }}"}},
+  {"type": "context", "elements": [
+    {"type": "mrkdwn", "text": "JIRA: {{ pr.jira.key }} - {{ pr.jira.summary }}"},
+    {"type": "mrkdwn", "text": "Confluence: <{{ pr.confluence.url }}|Page>"}
+  ]},
+  {"type": "section", "text": {"type": "mrkdwn", "text": "*Summary:*
+{{ pr.summary }}"}},
+  {"type": "divider"},
+  {% endfor %}
+]
